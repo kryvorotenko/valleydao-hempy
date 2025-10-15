@@ -215,7 +215,7 @@
 
         &-button {
             width: 100%;
-            padding: 1.8vw 1.6vw 1.1vw !important;
+            padding: 1.6vw 1.6vw 1.3vw !important;
             font-size: 1.66vw !important;
         }
 
@@ -707,6 +707,18 @@
                 object-fit: contain;
                 width: 503px;
             }
+        }
+
+        &-descriptions {
+&-item {
+    svg {
+        width: 64px;
+        height: 64px;
+    }
+    span {
+        font-size: 16px;
+    }
+}
         }
     }
 }

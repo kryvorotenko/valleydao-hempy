@@ -80,7 +80,7 @@ export default function Choose() {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>100%  <br/>Organic Hemp</td>
+                                <td>100% Organic Hemp</td>
                                 <td>
                                     <CheckIcon />
                                 </td>
@@ -95,7 +95,7 @@ export default function Choose() {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Biotech-<br/>Softened</td>
+                                <td>Biotech-Softened</td>
                                 <td>
                                     <CheckIcon />
                                 </td>
@@ -110,7 +110,7 @@ export default function Choose() {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Soft &<br/>Breathable</td>
+                                <td>Soft & Breathable</td>
                                 <td>
                                     <CheckIcon />
                                 </td>
