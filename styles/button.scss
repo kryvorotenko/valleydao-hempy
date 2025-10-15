@@ -1,0 +1,59 @@
+.button {
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &.icon {
+        font-size: 0;
+    }
+
+    &.text {
+        padding: 10px 22px 0;
+        color: #000;
+        font-family: 'Luckiest Guy', system-ui;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        white-space: nowrap;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.orange {
+        background: #F68713;
+        box-shadow: 0 2px 0 0 #000;
+
+        &:hover {
+            box-shadow: 0 4px 0 0 #000;
+        }
+
+        &:active {
+            background: #FFA624;
+        }
+    }
+
+    &.yellow {
+        background: #FFDD09;
+        box-shadow: 0 2px 0 0 #000;
+
+        &:hover {
+            box-shadow: 0 4px 0 0 #000;
+        }
+
+        &:active {
+            background: #FFE545;
+        }
+    }
+
+}
