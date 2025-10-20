@@ -57,6 +57,13 @@
         white-space: nowrap;
         margin: 0;
         z-index: -1;
+        margin-bottom: 20vw;
+    }
+
+    &-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10vw
     }
 
     &-card {
@@ -71,10 +78,6 @@
         width: 29.58vw;
         height: 42.98vw;
         margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
         &-img {
             width: 100%;
@@ -135,15 +138,6 @@
 
         &.orange {
             background: #FC9601;
-        }
-
-        &.left {
-            transform: translate(-50%, -50%) rotate(-16deg);
-        }
-
-        &.right {
-            transform: translate(-50%, -50%) rotate(16deg);
-
         }
     }
 
