@@ -3,15 +3,14 @@ import Image from 'next/image';
 interface PropsType {
     img: string;
     title: string;
-    position: 'left' | 'right';
     color: 'green' | 'purple' | 'pink' | 'orange';
     text: React.ReactNode;
     list?: string[];
 }
 
-export default function StoryCard({ img, title, position, color, text, list }: PropsType) {
+export default function StoryCard({ img, title, color, text, list }: PropsType) {
     return (
-        <div className={`story-card ${color} ${position}`}>
+        <div className={`story-card ${color}`}>
             <Image className="story-card-img" src={img} alt={'story card'} width={240} height={378} />
             <h3 className="story-card-title">{title}</h3>
             <div className='story-card-text-wrapper'><span className='story-card-text'>{text}</span>
