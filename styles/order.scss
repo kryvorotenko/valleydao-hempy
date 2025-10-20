@@ -17,11 +17,11 @@
         &-content {
             margin: 0 auto;
             width: 656px;
-            height: auto;
+            height: 100vh;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            padding: 4px;
+            padding: 48px 4px;
         }
 
         &-header {
@@ -43,7 +43,9 @@
             }
 
             &-button {
-
+                width: 48px !important;
+                height: 48px !important;
+                padding: 8px 8px 0 10px !important;
             }
         }
 
@@ -83,7 +85,12 @@
         }
 
         &-main {
-            margin-bottom: 48px;
+            margin-bottom: 4px;
+
+            &-context {
+                display: flex;
+                flex-direction: column;
+            }
 
             &-title {
                 color: #000;
@@ -96,10 +103,11 @@
                 margin-bottom: 24px;
             }
 
-            &-context {
+            &-wrapper {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 24px;
+                margin-bottom: 48px;
             }
 
             &-description {
@@ -125,18 +133,25 @@
                 }
 
                 &-price {
-                    color: #000;
-                    font-family: "Luckiest Guy", sans-serif;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 140%;
                     display: flex;
                     align-items: center;
+                    gap: 8px;
 
-                    span {
-                        font-size: 32px;
+                    .pre-order {
+                        color: #000;
+                        font-family: "Luckiest Guy", sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            font-size: 32px;
+                        }
                     }
+
 
                     .free {
                         border-radius: 6px;
@@ -169,7 +184,7 @@
                 font-weight: 400;
                 line-height: 100%;
                 text-transform: uppercase;
-                margin-bottom: 24px;
+                margin-bottom: 8px;
             }
 
             &-row {
@@ -184,11 +199,329 @@
                 padding: 19px 20px 8px !important;
             }
         }
-        &-select{
+
+        &-select {
             border-radius: 12px;
-            border: 1px solid  #000;
+            border: 1px solid #000;
             background: #FFFFB8;
-            
+
+        }
+
+        &-method {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &-title {
+                color: #000;
+                font-family: "Luckiest Guy", sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+            }
+
+            &-button {
+                width: 100%;
+                padding: 17px 50px 9px !important;
+
+            }
+
+            &-row {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                span {
+                    color: #000;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+
+                &-content {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 16px;
+                    margin-top: 8px;
+                }
+
+                &-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    border-radius: 12px;
+                    border: 2px solid #000;
+                    background: #FFFFB8;
+                    box-shadow: 0 2px 0 0 #000;
+                    padding: 13px !important;
+                    transition: 0.2s ease-in-out;
+                    cursor: pointer;
+                    font-size: 24px;
+                    width: 100%;
+
+                    &:hover {
+                        box-shadow: 0 4px 0 0 #000;
+                    }
+                }
+
+                &-button:nth-of-type(3) {
+                    font-family: 'Luckiest Guy', system-ui;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 28px;
+                    padding: 16px 20px 10px !important;
+
+                    svg {
+                        margin-bottom: 10px;
+                    }
+                }
+
+            }
+
+            &-data {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                align-items: flex-end;
+                margin-bottom: 24px;
+            }
+
+            &-radio {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                &-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+                &-input {
+                    display: none;
+                }
+
+                &-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                    flex-shrink: 0;
+                }
+
+                &-text {
+                    color: #000;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .order {
+        &-popup {
+            width: 100%;
+            height: auto;
+            align-items: start;
+
+            &-content {
+                width: 100%;
+                height: auto;
+                padding: 48px 24px 24px;
+            }
+
+            &-header {
+                margin-bottom: 40px;
+
+                &-title {
+                    font-size: 32px;
+                }
+
+                &-button {
+
+                }
+            }
+
+            &-summary {
+                padding-right: 0;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &::-webkit-scrollbar-track {
+                    display: none;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    display: none;
+                }
+
+                &-wrapper {
+                    padding: 0;
+                    border: none;
+                    background: none;
+                    box-shadow: none;
+                    overflow: hidden;
+                    flex: auto;
+                }
+            }
+
+            &-main {
+                margin-bottom: 4px;
+
+                &-context {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: 1px solid #000;
+                    background: #FFFFB8;
+                    box-shadow: 0 4px 0 0 #000;
+                }
+
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 16px;
+                }
+
+                &-wrapper {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 16px;
+                    margin-bottom: 0;
+
+                    img {
+                        width: 94px;
+                        height: 94px;
+                    }
+                }
+
+                &-description {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    &-title {
+                        font-size: 16px;
+
+                    }
+
+                    &-span {
+                        color: #000;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+
+                    &-price {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+
+                        .pre-order {
+                            font-size: 16px;
+
+                            span {
+                                font-size: 24px;
+                            }
+                        }
+
+
+                        .free {
+                            padding: 6px 8px 2px;
+                            font-size: 12px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            &-details {
+                padding: 16px;
+                border-radius: 12px;
+                border: 1px solid #000;
+                background: #FFFFB8;
+                box-shadow: 0 4px 0 0 #000;
+                margin-top: 16px;
+
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 0;
+                }
+
+                &-row {
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                &-button {
+                    width: 100%;
+                    margin-top: 24px;
+                    padding: 19px 20px 8px !important;
+                }
+            }
+
+            &-select {
+                border-radius: 12px;
+                border: 1px solid #000;
+                background: #FFFFB8;
+            }
+
+            &-method {
+                padding: 16px;
+                border-radius: 12px;
+                border: 1px solid #000;
+                background: #FFFFB8;
+                box-shadow: 0 4px 0 0 #000;
+                margin-top: 16px;
+
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 0;
+                }
+
+                &-row {
+                    &-content {
+                        gap: 8px;
+                        margin-top: 8px;
+                    }
+
+                    &-button {
+                        gap: 4px;
+                        padding: 17px 8px !important;
+                        font-size: 22px;
+
+                        &:hover {
+                            box-shadow: 0 4px 0 0 #000;
+                        }
+                    }
+
+                    &-button:nth-of-type(3) {
+                        font-size: 24px;
+                        padding: 16px 20px 10px !important;
+
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }

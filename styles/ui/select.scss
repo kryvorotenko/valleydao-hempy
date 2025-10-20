@@ -4,7 +4,6 @@
         flex-direction: column;
         gap: 8px;
         width: 100%;
-
     }
 
     &-label {
@@ -15,19 +14,38 @@
         line-height: 140%;
     }
 
+    &-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     &-check-icon {
         width: 24px;
         height: 24px;
-        border-radius: 50%;
-        border: 1px solid #000000;
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
-    &-check-icon.empty{
-        width: 24px;
-        height: 24px;
+
+    &-flag {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+
+        &-img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        & span {
+            white-space: nowrap !important;
+        }
     }
 
     &__control {
@@ -47,26 +65,38 @@
     }
 
     &__menu {
-
+        border: none !important;
         background: #FFFFB8 !important;
-
+        height:fit-content!important;
+        box-shadow: none !important;
         &-list {
             border-radius: 12px !important;
             border: 1px solid #000 !important;
             background: #FFFFB8 !important;
+            height: 250px!important;
         }
     }
 
     &__option {
         padding: 21px !important;
+        background-color: #FFFFB8 !important;
 
         &:hover {
-            background: #bdbd84 !important;
+            background: #ffebb8 !important;
         }
 
         &--is-selected {
-            background: #FFDD09 !important;
+            background: #e47f0a !important;
+            color: #000 !important;
         }
     }
-
+}
+@media screen and (max-width: 768px){
+    .select{
+        &__menu {
+            &-list {
+                   height: 210px!important;
+            }
+        }
+    }
 }

@@ -12,6 +12,10 @@
 
     &.icon {
         font-size: 0;
+        svg{
+            margin-bottom: 8px;
+            margin-right: 4px;
+        }
     }
 
     &.text {
@@ -45,6 +49,18 @@
 
     &.yellow {
         background: #FFDD09;
+        box-shadow: 0 2px 0 0 #000;
+
+        &:hover {
+            box-shadow: 0 4px 0 0 #000;
+        }
+
+        &:active {
+            background: #FFE545;
+        }
+    }
+    &.original {
+        background: #FFFFB8;;
         box-shadow: 0 2px 0 0 #000;
 
         &:hover {

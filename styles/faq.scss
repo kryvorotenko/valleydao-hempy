@@ -64,6 +64,9 @@
                 text-transform: uppercase;
                 padding-top: 10px;
             }
+            &-button{
+               padding: 10px 8px 2px 11px!important;
+            }
         }
 
         &-answer {
@@ -124,7 +127,7 @@
         padding: 25px 0 55%;
 
         &-title {
-            font-size: 3.33vw;
+            font-size: 24px;
             position: initial;
             margin-bottom: 16px;
         }
