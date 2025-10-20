@@ -1,0 +1,42 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    &-label {
+        color:#000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    &-field {
+        width: 100%;
+        padding: 21px;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        border-radius: 12px;
+        border: 1px solid #000;
+        background:  #FFFFB8;
+        outline: none;
+        transition: all 0.2s ease;
+
+        &::placeholder {
+            color: #888;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        &:focus {
+            border-color: #444;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+        }
+    }
+}

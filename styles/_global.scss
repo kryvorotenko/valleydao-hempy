@@ -30,11 +30,14 @@ main {
 }
 
 
-@import "header";
-@import "button";
+@import "ui/header";
+@import "ui/button";
 @import "banner";
 @import "product";
 @import "choose";
 @import "story";
 @import 'faq';
-@import "footer";
+@import "ui/footer";
+@import "order";
+@import "ui/input";
+@import "ui/select";

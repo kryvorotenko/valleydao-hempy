@@ -270,6 +270,7 @@
             &-pagination {
                 display: flex;
                 justify-content: center;
+                margin-top: 30px;
 
                 .swiper-pagination-bullet {
                     width: 16px;
@@ -411,7 +412,6 @@
         fill: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(15px);
         z-index: 9;
-
         display: flex;
         align-items: center;
         justify-content: center;

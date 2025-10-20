@@ -1,17 +1,34 @@
+'use client';
+
+import OrderPopup from '@/componens/OrderPopup';
+import ProductDescriptionItem from '@/componens/product/ProductDescriptionItem';
 import ProductSlider from '@/componens/product/ProductSlider';
 import Button from '@/componens/ui/Button';
 import ProductPriceLabelBg from '@/icon/ProductPriceLabelBg';
+import ProductPriceLabelMobileBg from '@/icon/ProductPriceLabelMobileBg';
+import DescriptionIconFive from '@/icon/product-description/DescriptionIconFive';
+import DescriptionIconFour from '@/icon/product-description/DescriptionIconFour';
 import DescriptionIconOne from '@/icon/product-description/DescriptionIconOne';
+import DescriptionIconThree from '@/icon/product-description/DescriptionIconThree';
+import DescriptionIconTwo from '@/icon/product-description/DescriptionIconTwo';
 import Image from 'next/image';
 import Link from 'next/link';
-import ProductDescriptionItem from "@/componens/product/ProductDescriptionItem";
-import DescriptionIconTwo from "@/icon/product-description/DescriptionIconTwo";
-import DescriptionIconThree from "@/icon/product-description/DescriptionIconThree";
-import DescriptionIconFour from "@/icon/product-description/DescriptionIconFour";
-import DescriptionIconFive from "@/icon/product-description/DescriptionIconFive";
-import ProductPriceLabelMobileBg from "@/icon/ProductPriceLabelMobileBg";
+import React from 'react';
 
 export default function Product() {
+    const [isPopupOpen, setPopupOpen] = React.useState(false);
+    React.useEffect(() => {
+        if (isPopupOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isPopupOpen]);
+
     return (
         <section className="product">
             <Image className="product-img" src="/img/product-bg.png" alt="banner" fill priority />
@@ -54,21 +71,26 @@ export default function Product() {
                             <span className="product-price-order-label">Free shipping</span>
                         </p>
                         <span className="product-price-regular">regular price: $129</span>
-                        <Button className="product-price-button" title="Pre-order now" />
+                        <Button
+                            onClick={() => setPopupOpen(true)}
+                            className="product-price-button"
+                            title="Pre-order now"
+                        />
                         <ProductPriceLabelBg />
-                        <ProductPriceLabelMobileBg/>
+                        <ProductPriceLabelMobileBg />
                     </div>
                 </div>
                 <div className="product-descriptions-wrapper">
-                <div className="product-descriptions">
-                   <ProductDescriptionItem icon={ <DescriptionIconOne />} title='Durability'/>
-                   <ProductDescriptionItem icon={ <DescriptionIconTwo />} title='Breathability'/>
-                   <ProductDescriptionItem icon={ <DescriptionIconThree />} title='Plastic'/>
-                   <ProductDescriptionItem icon={ <DescriptionIconFour />} title='$HEMPY with purchase'/>
-                   <ProductDescriptionItem icon={ <DescriptionIconFive />} title='Pesticide-free'/>
-                </div>
+                    <div className="product-descriptions">
+                        <ProductDescriptionItem icon={<DescriptionIconOne />} title="Durability" />
+                        <ProductDescriptionItem icon={<DescriptionIconTwo />} title="Breathability" />
+                        <ProductDescriptionItem icon={<DescriptionIconThree />} title="Plastic" />
+                        <ProductDescriptionItem icon={<DescriptionIconFour />} title="$HEMPY with purchase" />
+                        <ProductDescriptionItem icon={<DescriptionIconFive />} title="Pesticide-free" />
+                    </div>
                 </div>
             </div>
+            {isPopupOpen && <OrderPopup onClick={() => setPopupOpen(false)} />}
         </section>
     );
 }

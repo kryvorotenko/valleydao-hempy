@@ -1,6 +1,10 @@
+'use client';
+
+import Lotti2 from '@/animations/Line 2.json';
 import CheckIcon from '@/icon/CheckIcon';
 import CloudIcon from '@/icon/CloudIcon';
 import NotIcon from '@/icon/NotIcon';
+import Lottie from 'lottie-react';
 import Image from 'next/image';
 
 export default function Choose() {
@@ -14,8 +18,9 @@ export default function Choose() {
                         <thead>
                             <tr>
                                 <th className="choose-table-cloud">
+                                    <Lottie className="choose-table-cloud-lottie" animationData={Lotti2} />
                                     <span>
-                                        <CloudIcon />
+                                        <CloudIcon  />
                                         Feature
                                     </span>
                                 </th>
@@ -27,11 +32,12 @@ export default function Choose() {
                                             width={206}
                                             height={220}
                                         />
-                                         <span className="default">Hemp Hoodie</span>
+                                        <span className="default">Hemp Hoodie</span>
                                         <span className="mobile">
-                                            Hemp<br/>Hoodie
+                                            Hemp
+                                            <br />
+                                            Hoodie
                                         </span>
-
                                     </span>
                                 </th>
                                 <th>

@@ -97,6 +97,26 @@
             right: -40%;
         }
     }
+
+    &-lottie{
+        &-item{
+            position: absolute;
+        }
+        &-item.one{
+            width: 5.2vw;
+            height: auto;
+            top: 45%;
+            right: -30%;
+            transform: rotate(200deg);
+        }
+        &-item.two{
+            width: 8.87vw;
+            height: auto;
+            bottom: 5%;
+            left: -30%;
+
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -111,6 +131,7 @@
 
         &-content {
             width: 100%;
+
         }
 
         &-item {

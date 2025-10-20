@@ -1,3 +1,4 @@
+'use client'
 import StoryCard from '@/componens/story/StoryCard';
 import StoryProgressItem from '@/componens/story/StoryProgressItem';
 import StoryApple1 from '@/icon/story/StoryApple1';
@@ -5,6 +6,9 @@ import StoryApple2 from '@/icon/story/StoryApple2';
 import StoryApple3 from '@/icon/story/StoryApple3';
 import StoryApple4 from '@/icon/story/StoryApple4';
 import Image from 'next/image';
+import Lottie from "lottie-react";
+import Lotti2 from "@/animations/Line 2.json";
+import Lotti3 from "@/animations/Line 3.json";
 
 export default function Story() {
     return (
@@ -12,6 +16,10 @@ export default function Story() {
             <Image className="story-img" src="/img/story-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="story-content">
+                    <div className="story-lottie">
+                        <Lottie className='story-lottie-item one' animationData={Lotti2}/>
+                        <Lottie className='story-lottie-item two' animationData={Lotti3}/>
+                    </div>
                     <h1 className="story-title">Our story</h1>
                     <div className="story-cards">
                         <StoryCard
@@ -24,8 +32,8 @@ export default function Story() {
                                     Not long ago, Hempy was just a lab experiment — a dream to replace wasteful fast
                                     fashion with something better. We asked: What if hemp, one of Earth’s most
                                     sustainable crops, could be made truly wearable — soft, breathable, and durable
-                                    through science? <br />
-                                    <br /> Today, that vision is real
+                                    through science? <br/>
+                                    <br/> Today, that vision is real
                                 </>
                             }
                         />

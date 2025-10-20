@@ -269,6 +269,40 @@
             }
         }
     }
+
+
+    &-lottie {
+        &-item {
+            position: absolute;
+        }
+        &-item.one{
+            width: 3.87vw;
+            height: auto;
+            top: 5%;
+            right: 22%;
+            transform: rotate(40deg);
+        }
+        &-item.two{
+            width: 3.87vw;
+            height: auto;
+            top: 47%;
+            left: 7%;
+        }
+        &-item.three{
+            width: 9.86vw;
+            height: auto;
+            top: 52%;
+            left: 17%;
+        }
+        &-item.four{
+            width: 6.45vw;
+            height: auto;
+            top: 16%;
+            right: 4%;
+            transform: rotate(220deg);
+        }
+    }
+
 }
 
 @media screen and (max-width: 1220px) {

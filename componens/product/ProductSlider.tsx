@@ -12,7 +12,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 export default function ProductSlider() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
     const [viewingImage, setViewingImage] = useState<number | null>(null);
-    const [popupSwiper, setPopupSwiper] = useState<SwiperClass | null>(null); // 👈 new ref state
+    const [popupSwiper, setPopupSwiper] = useState<SwiperClass | null>(null);
 
     const prevRef = useRef<HTMLButtonElement | null>(null);
     const nextRef = useRef<HTMLButtonElement | null>(null);

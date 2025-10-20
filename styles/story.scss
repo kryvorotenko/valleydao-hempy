@@ -24,6 +24,25 @@
         align-items: center;
     }
 
+    &-lottie{
+        &-item{
+            position: absolute;
+        }
+        &-item.one{
+            width: 6.2vw;
+            height: auto;
+            top: 55%;
+            left: 7%;
+            transform: rotate(-20deg);
+        }
+        &-item.two{
+            width: 9.87vw;
+            height: auto;
+            top: 12%;
+            right: 10%;
+        }
+    }
+
     &-title {
         color: #FFDD09;
         text-align: center;
