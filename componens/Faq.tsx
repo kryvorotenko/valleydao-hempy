@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Lottie from "lottie-react";
 import Lotti2 from "@/animations/Line 2.json";
 import Lotti3 from "@/animations/Line 3.json";
+import FaqCloudIcon from "@/icon/faq/FaqCloudIcon";
 
 export default function Faq() {
     return (
@@ -68,6 +69,7 @@ export default function Faq() {
                         width={360}
                         height={408}
                     />
+                    <FaqCloudIcon/>
                     <div className="faq-lottie">
                         <Lottie className='faq-lottie-item two' animationData={Lotti3}/>
                         <Lottie className='faq-lottie-item one' animationData={Lotti2}/>

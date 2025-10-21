@@ -65,11 +65,11 @@ export default function Product() {
                         <Link href="#" className="product-price-link">
                             Sizing chart
                         </Link>
-                        <p className="product-price-order">
-                            Pre-order:
-                            <span>$109</span>
-                            <span className="product-price-order-label">Free shipping</span>
-                        </p>
+                            <p className="product-price-order">
+                                Pre-order:
+                                <span>$109</span>
+                                <span className="product-price-order-label">Free shipping</span>
+                            </p>
                         <span className="product-price-regular">regular price: $129</span>
                         <Button
                             onClick={() => setPopupOpen(true)}

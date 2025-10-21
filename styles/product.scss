@@ -179,6 +179,7 @@
             width: 100%;
             white-space: nowrap;
             margin-bottom: 4px;
+            position: relative;
 
             span {
                 font-size: 3.3vw;
@@ -186,6 +187,7 @@
             }
 
             &-label {
+                position: absolute;
                 border-radius: 6px;
                 border: 2px solid #000;
                 background: #37CC54;
@@ -200,6 +202,11 @@
                 margin-right: 1.66vw;
                 margin-bottom: 1.04vw;
                 white-space: nowrap;
+                display: block;
+                left: 50%;
+                bottom: -10px;
+                transform-origin: 100% 50%;
+                animation: move-order-label 6s linear infinite;
             }
         }
 
@@ -224,10 +231,11 @@
                 position: absolute;
                 transform: translateX(-50%);
                 bottom: -1%;
-                left: -7.5vw;
+                left: -21.2vw;
                 width: 27.43vw;
                 height: auto;
-
+                transform-origin: 100% 50%;
+                animation: move-price 2s ease-in-out infinite alternate;
                 &-mobile {
                     display: none;
                 }
@@ -248,6 +256,8 @@
 
         &-controls {
             &-arrow {
+                width: 48px;
+                height: 48px;
                 position: absolute;
                 top: 50%;
                 cursor: pointer;
@@ -261,10 +271,12 @@
 
             .prev {
                 left: 5%;
+                padding: 7px 3px 1px 5px;
             }
 
             .next {
                 right: 5%;
+                padding: 7px 1px 1px 7px;
             }
 
             &-pagination {
@@ -431,6 +443,16 @@
         }
     }
 }
+@keyframes move-price {
+    0%   { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}
+@keyframes move-order-label {
+    0%   { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
 
 @media screen and (max-width: 768px) {
     .product {
@@ -695,7 +717,7 @@
                 &-bg {
                     width: 367px;
                     bottom: -4px;
-                    left: -22%;
+                    left: -61%;
                 }
             }
         }

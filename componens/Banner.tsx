@@ -66,7 +66,6 @@ export default function Banner() {
                     <LeafFiveIcon />
                 </span>
             </p>
-
         </section>
     );
 }

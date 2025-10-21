@@ -177,9 +177,9 @@ export default function Choose() {
                             </tr>
                             <tr>
                                 <td>Rewards</td>
-                                <td>
+                                <td className='choose-table-span-wrapper'>
                                     <CheckIcon /> <br />
-                                    {/*<span>50$ in $HEMPY</span>*/}
+                                    <span>50$ in $HEMPY</span>
                                 </td>
                                 <td>
                                     <NotIcon />

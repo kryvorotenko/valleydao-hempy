@@ -64,8 +64,9 @@
                 text-transform: uppercase;
                 padding-top: 10px;
             }
-            &-button{
-               padding: 10px 8px 2px 11px!important;
+
+            &-button {
+                padding: 10px 8px 2px 11px !important;
             }
         }
 
@@ -101,24 +102,50 @@
         }
     }
 
-    &-lottie{
-        &-item{
+    &-cloud {
+        position: absolute;
+        width: 22.08vw;
+        height: auto;
+        transform: translateX(-50%);
+        right: -50%;
+        top: 10%;
+        transform-origin: 50% 100%;
+        animation: move-faq-cloud 6s linear infinite;
+        z-index: -1;
+    }
+
+    &-lottie {
+        &-item {
             position: absolute;
         }
-        &-item.one{
+
+        &-item.one {
             width: 5.2vw;
             height: auto;
             top: 45%;
             right: -30%;
             transform: rotate(200deg);
         }
-        &-item.two{
+
+        &-item.two {
             width: 8.87vw;
             height: auto;
             bottom: 5%;
             left: -30%;
 
         }
+    }
+}
+
+@keyframes move-faq-cloud {
+    0% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(7deg);
     }
 }
 
@@ -185,6 +212,10 @@
                 font-size: 16px;
                 padding-top: 30px;
             }
+        }
+
+        &-cloud {
+            width: 318px;
         }
     }
 }

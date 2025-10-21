@@ -189,6 +189,7 @@
         &-text.lemon {
             background: #FFFFB8;
         }
+
     }
 
     &-label.reverse {
@@ -196,24 +197,24 @@
     }
 
     &-labels {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
         .banner-label:nth-of-type(1) {
-            left: 12vw;
-            bottom: 28vw;
+            animation: move-triangle-1 16s linear infinite;
         }
 
         .banner-label:nth-of-type(2) {
-            left: 5vw;
-            bottom: 8vw;
+            animation: move-triangle-2 18s linear infinite;
         }
 
         .banner-label:nth-of-type(3) {
-            right: 11vw;
-            bottom: 42.5vw;
+            animation: move-triangle-3 19s linear infinite;
         }
 
         .banner-label:nth-of-type(4) {
-            right: 3vw;
-            bottom: 17vw;
+            animation: move-triangle-4 20s linear infinite;
         }
     }
 
@@ -223,6 +224,7 @@
         left: 9vw;
         top: 3vw;
         height: fit-content;
+        animation: move-order 22s linear infinite;
 
         &-bg {
             position: absolute;
@@ -270,31 +272,34 @@
         }
     }
 
-
     &-lottie {
         &-item {
             position: absolute;
         }
-        &-item.one{
+
+        &-item.one {
             width: 3.87vw;
             height: auto;
             top: 5%;
             right: 22%;
             transform: rotate(40deg);
         }
-        &-item.two{
+
+        &-item.two {
             width: 3.87vw;
             height: auto;
             top: 47%;
             left: 7%;
         }
-        &-item.three{
+
+        &-item.three {
             width: 9.86vw;
             height: auto;
             top: 52%;
             left: 17%;
         }
-        &-item.four{
+
+        &-item.four {
             width: 6.45vw;
             height: auto;
             top: 16%;
@@ -302,8 +307,91 @@
             transform: rotate(220deg);
         }
     }
-
 }
+
+@keyframes move-triangle-1 {
+    0% {
+        top: 35%;
+        left: 11%;
+    }
+    33% {
+        top: 40%;
+        left: 9%;
+    }
+    66% {
+        top: 40%;
+        left: 13%;
+    }
+    100% {
+        top: 35%;
+        left: 11%;
+    }
+}
+
+@keyframes move-triangle-2 {
+    0% {
+        bottom: 10%;
+        left: 7%;
+    }
+    33% {
+        bottom: 15%;
+        left: 5%;
+    }
+    66% {
+        bottom: 15%;
+        left: 10%;
+    }
+    100% {
+        bottom: 10%;
+        left: 7%;
+    }
+}
+
+@keyframes move-triangle-3 {
+    0% {
+        top: 15%;
+        right: 11%;
+    }
+    33% {
+        top: 10%;
+        right: 9%;
+    }
+    66% {
+        top: 10%;
+        right: 13%;
+    }
+    100% {
+        top: 15%;
+        right: 11%;
+    }
+}
+
+@keyframes move-triangle-4 {
+    0% {
+        bottom: 28%;
+        right: 5%;
+    }
+    33% {
+        bottom: 31%;
+        right: 2%;
+    }
+    66% {
+        bottom: 31%;
+        right: 8%;
+    }
+    100% {
+        bottom: 28%;
+        right: 5%;
+    }
+}
+
+@keyframes move-order {
+    0% {left: 8%;top: 5%;}
+    33% {left: 10%;top: 8%;}
+    66% {left: 8%;top: 8%;}
+    100% {left: 8%;top: 5%;}
+}
+
 
 @media screen and (max-width: 1220px) {
     .banner-offer-leaf {
