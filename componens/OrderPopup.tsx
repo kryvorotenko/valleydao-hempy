@@ -14,16 +14,16 @@ export default function OrderPopup({ onClick, size }: PropsType) {
     };
 
     const test = async () => {
-        const res = await fetch("/api/create-checkout-session", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
+        const res = await fetch('/api/create-checkout-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ size: size }),
         });
 
         const data = await res.json();
 
-        console.log(data)
-    }
+        console.log(data);
+    };
 
     return (
         <div className="order-popup" onClick={handleOverlayClick}>
@@ -37,7 +37,9 @@ export default function OrderPopup({ onClick, size }: PropsType) {
                         <div className="order-popup-main">
                             <div className="order-popup-main-context">
                                 <h4 className="order-popup-main-title">your Order summary</h4>
-                                <button type='button' onClick={test}>test</button>
+                                <button type="button" onClick={test}>
+                                    test
+                                </button>
                                 <div className="order-popup-main-wrapper">
                                     <Image src="/img/order/order-item.png" alt="order image" width={120} height={120} />
                                     <div className="order-popup-main-description">
