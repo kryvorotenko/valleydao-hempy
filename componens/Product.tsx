@@ -12,14 +12,15 @@ import DescriptionIconOne from '@/icon/product-description/DescriptionIconOne';
 import DescriptionIconThree from '@/icon/product-description/DescriptionIconThree';
 import DescriptionIconTwo from '@/icon/product-description/DescriptionIconTwo';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SizingPopup from "@/componens/SizingPopup";
 
 export default function Product() {
-    const [isPopupOpen, setPopupOpen] = React.useState(false);
+    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [selectedSize, setSelectedSize] = useState<string | null>(null);
     const[isSizePopupOpen, setSizePopupOpen] = React.useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isPopupOpen) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -31,7 +32,7 @@ export default function Product() {
         };
     }, [isPopupOpen]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isSizePopupOpen) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -43,6 +44,7 @@ export default function Product() {
         };
     }, [isSizePopupOpen]);
 
+    const sizes = ['s', 'm', 'l', 'xl'];
 
     return (
         <section className="product" id='product'>
@@ -62,19 +64,18 @@ export default function Product() {
                         <div className="product-price-size">
                             <span className="product-price-size-text">Size (Unisex)</span>
                             <div className="product-price-size-row">
-                                <label className="product-price-size-item">
-                                    <input name="size" value={1} type="radio" />S
-                                </label>
-                                <label className="product-price-size-item">
-                                    <input name="size" value={2} type="radio" />M
-                                </label>
-                                <label className="product-price-size-item">
-                                    <input name="size" value={3} type="radio" />L
-                                </label>
-                                <label className="product-price-size-item">
-                                    <input name="size" value={4} type="radio" />
-                                    XL
-                                </label>
+                                {sizes.map((size) => (
+                                    <label key={`product-sizes-${size}`} className="product-price-size-item">
+                                        <input
+                                            name="size"
+                                            type="radio"
+                                            value={size}
+                                            checked={selectedSize === size}
+                                            onChange={() => setSelectedSize(size)}
+                                        />
+                                        {size.toUpperCase()}
+                                    </label>
+                                ))}
                             </div>
                         </div>
                         <button onClick={()=>setSizePopupOpen(true)} type={'button'} className="product-price-link">
@@ -89,6 +90,7 @@ export default function Product() {
                         <Button
                             onClick={() => setPopupOpen(true)}
                             className="product-price-button"
+                            disabled={!selectedSize}
                             title="Pre-order now"
                         />
                         <ProductPriceLabelBg />
@@ -105,7 +107,7 @@ export default function Product() {
                     </div>
                 </div>
             </div>
-            {isPopupOpen && <OrderPopup onClick={() => setPopupOpen(false)} />}
+            {isPopupOpen && selectedSize && <OrderPopup size={selectedSize} onClick={() => setPopupOpen(false)} />}
             {isSizePopupOpen && <SizingPopup onClick={() => setSizePopupOpen(false)} />}
         </section>
     );

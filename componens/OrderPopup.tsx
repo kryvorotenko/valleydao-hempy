@@ -1,17 +1,30 @@
-import OrderPopupDetails from '@/componens/order-popup/OrderPopupDetails';
+import OrderPopupMethod from '@/componens/order-popup/OrderPopupMethod';
 import Button from '@/componens/ui/Button';
 import CloseIcon from '@/icon/CloseIcon';
 import Image from 'next/image';
-import OrderPopupMethod from "@/componens/order-popup/OrderPopupMethod";
 
 interface PropsType {
     onClick?: () => void;
+    size: string;
 }
 
-export default function OrderPopup({ onClick }: PropsType) {
+export default function OrderPopup({ onClick, size }: PropsType) {
     const handleOverlayClick = () => {
         if (onClick) onClick();
     };
+
+    const test = async () => {
+        const res = await fetch("/api/create-checkout-session", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ size: size }),
+        });
+
+        const data = await res.json();
+
+        console.log(data)
+    }
+
     return (
         <div className="order-popup" onClick={handleOverlayClick}>
             <div onClick={(e) => e.stopPropagation()} className="order-popup-content">
@@ -24,8 +37,9 @@ export default function OrderPopup({ onClick }: PropsType) {
                         <div className="order-popup-main">
                             <div className="order-popup-main-context">
                                 <h4 className="order-popup-main-title">your Order summary</h4>
-                                <div className='order-popup-main-wrapper'>
-                                    <Image src="/img/order/order-item.png" alt="order image" width={120} height={120}/>
+                                <button type='button' onClick={test}>test</button>
+                                <div className="order-popup-main-wrapper">
+                                    <Image src="/img/order/order-item.png" alt="order image" width={120} height={120} />
                                     <div className="order-popup-main-description">
                                         <h5 className="order-popup-main-description-title">Hemp Hoodie</h5>
                                         <span className="order-popup-main-description-span">Size: L</span>
@@ -40,7 +54,7 @@ export default function OrderPopup({ onClick }: PropsType) {
                                 </div>
                             </div>
                             {/*<OrderPopupDetails/>*/}
-                            <OrderPopupMethod/>
+                            <OrderPopupMethod />
                         </div>
                     </div>
                 </div>

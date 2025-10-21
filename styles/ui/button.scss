@@ -36,41 +36,46 @@
     }
 
     &.orange {
-        background: #F68713;
+        background: #f68713;
         box-shadow: 0 2px 0 0 #000;
 
-        &:hover {
+        &:not(:disabled):hover {
             box-shadow: 0 4px 0 0 #000;
         }
 
-        &:active {
-            background: #FFA624;
+        &:not(:disabled):active {
+            background: #ffa624;
         }
     }
 
     &.yellow {
-        background: #FFDD09;
+        background: #ffdd09;
         box-shadow: 0 2px 0 0 #000;
 
-        &:hover {
+        &:not(:disabled):hover {
             box-shadow: 0 4px 0 0 #000;
         }
 
-        &:active {
-            background: #FFE545;
+        &:not(:disabled):active {
+            background: #ffe545;
         }
     }
     &.original {
-        background: #FFFFB8;;
+        background: #ffffb8;
         box-shadow: 0 2px 0 0 #000;
 
-        &:hover {
+        &:not(:disabled):hover {
             box-shadow: 0 4px 0 0 #000;
         }
 
-        &:active {
-            background: #FFE545;
+        &:not(:disabled):active {
+            background: #ffe545;
         }
     }
 
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.75;
+        filter: blur(2);
+    }
 }

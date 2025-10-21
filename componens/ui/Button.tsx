@@ -1,27 +1,44 @@
 import Link from 'next/link';
-import { ReactNode, RefObject } from 'react';
+import { ButtonHTMLAttributes, ReactNode, RefObject } from 'react';
 
 interface PropsType {
     icon?: ReactNode;
     title?: ReactNode | string;
     href?: string;
     onClick?: () => void;
-    color?: 'orange' | 'yellow' |'original';
+    color?: 'orange' | 'yellow' | 'original';
     className?: string;
+    disabled?: boolean;
     ref?: RefObject<HTMLButtonElement | null>;
+    type?: ButtonHTMLAttributes<unknown>['type'];
 }
 
-export default function Button({ icon, ref, title, href, onClick, color = 'orange', className }: PropsType) {
+export default function Button({
+    icon,
+    disabled = false,
+    ref,
+    title,
+    href,
+    onClick,
+    color = 'orange',
+    type = 'button',
+    className,
+}: PropsType) {
     return href ? (
-        <Link href={href} className={`button ${className} ${color} ${icon ? 'icon' : ''} ${title ? 'text' : ''}`}>
+        <Link
+            href={href}
+            aria-disabled={disabled}
+            className={`button ${className} ${color} ${icon ? 'icon' : ''} ${title ? 'text' : ''}`}
+        >
             {icon && icon}
             {title && title}
         </Link>
     ) : (
         <button
             ref={ref}
-            type="button"
+            type={type}
             onClick={onClick}
+            disabled={disabled}
             className={`button ${className} ${color}  ${icon ? 'icon' : ''} ${title ? 'text' : ''}`}
         >
             {icon && icon}
