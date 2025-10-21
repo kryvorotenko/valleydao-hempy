@@ -459,64 +459,13 @@
             bottom: 30%;
             right: 10%;
             margin-bottom: 34px;
+            z-index: 2;
 
             svg {
                 width: 148px;
                 height: 148px;
                 transform-origin: 50% 50%;
                 animation: rotate-slow 20s linear infinite;
-            }
-        }
-
-        &-order {
-            position: absolute;
-            transform: rotate(17deg);
-            left: 9vw;
-            top: 3vw;
-
-            &-bg {
-                position: absolute;
-                height: calc(100% + 4vw);
-                width: auto;
-                top: 50%;
-                transform: translateY(-50%);
-                right: -3vw;
-            }
-
-            &-content {
-                border: 2px solid #000;
-                background: #FFFFB8;
-                position: relative;
-                padding: 2.2vw 1.5vw;
-                text-align: center;
-                color: #000;
-                font-family: "Luckiest Guy", sans-serif;
-                font-size: 1.66vw;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 1.1vw;
-
-                &-row {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 10px;
-                }
-
-                &-title {
-                    line-height: 100%;
-                    text-transform: uppercase;
-                    font-size: 3.33vw;
-                    margin-top: 1vw;
-                    display: inline-block;
-                }
-
-                svg {
-                    margin-left: 0.7vw;
-                    height: 2.8vw;
-                    transform: translateY(0.7vw);
-                    margin-top: -0.7vw;
-                }
             }
         }
 
@@ -616,15 +565,18 @@
                 position: absolute;
                 height: calc(100% + 20px);
                 width: auto;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 100%;
+                transform: translate(25%,100% );
                 right: -3vw;
             }
 
             &-content {
+                top: 230px;
+                left: 34%;
                 padding: 10px;
                 font-size: 14px;
                 line-height: 140%;
+                display: block;
 
                 &-row {
                     display: flex;

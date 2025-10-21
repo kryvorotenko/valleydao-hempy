@@ -71,18 +71,9 @@
         align-items: center;
         gap: 0.55vw;
 
-        .button {
-            border-radius: 0.69vw;
-            padding: 0.74vw 0.64vw 0.24vw 0.74vw;
-
-            svg {
-                width: 1.66vw;
-                height: 1.66vw;
-            }
-        }
 
         .button.text {
-            padding: 0.60vw 0.64vw 0.2vw;
+            padding: 0.40vw 0.64vw 0.24vw;
             font-size: 1.66vw;
         }
 
@@ -312,4 +303,12 @@
             }
         }
     }
+}
+@media screen and (min-width: 1920px){
+  .header-socials{
+      .button.text {
+          padding: 10px 10px 3px;
+          font-size: 24px;
+      }
+  }
 }

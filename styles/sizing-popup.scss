@@ -1,0 +1,183 @@
+.sizing-popup {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    overflow-y: auto;
+
+    &-content {
+        margin: 0 auto;
+        width: 648px;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 4px;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        width: 100%;
+
+        &-title {
+            color: #FFDD09;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #000;
+            font-family: "Luckiest Guy", sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+    }
+
+    &-table {
+        border-radius: 12px;
+        background: #FFFFB8;
+        box-shadow: 0 4px 0 0 #000;
+        padding: 24px;
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                border-bottom: 1px solid #000;
+
+                th {
+                    color: #000;
+                    font-family: "Luckiest Guy", sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    text-align: center;
+                    padding: 24px 12px 24px;
+                    white-space: nowrap;
+
+                    span {
+                        color: #FFDD09;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #000;
+                        font-family: "Luckiest Guy", sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        padding: 0 !important;
+                    }
+                }
+            }
+
+            :first-of-type {
+                padding-left: 24px;
+            }
+
+            :last-of-type {
+                padding-right: 24px;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    color: #000;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    text-align: center;
+                    padding: 12px;
+                }
+            }
+
+            :first-of-type {
+                padding-left: 24px;
+            }
+
+            :last-of-type {
+                padding-right: 24px;
+            }
+
+
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sizing-popup {
+        padding-top: 50px;
+        width: 100%;
+        height: auto;
+        align-items: start;
+
+        &-content {
+            width: 100%;
+            height: auto;
+            padding: 48px 24px 24px;
+        }
+
+        &-header {
+            &-title {
+                font-size: 32px;
+            }
+        }
+
+        &-table {
+            padding: 16px;
+
+            thead {
+                tr {
+                    th {
+                        font-size: 14px;
+                        padding: 12px 5px 12px;
+                        white-space: wrap;
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                :first-of-type {
+                    padding-left: 10px;
+                }
+
+                :last-of-type {
+                    padding-right: 10px;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        font-size: 14px;
+                        padding: 10px 5px;
+                    }
+                }
+
+                :first-of-type {
+                    padding-left: 10px;
+                }
+
+                :last-of-type {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

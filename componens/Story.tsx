@@ -122,12 +122,11 @@ export default function Story() {
 
     const cardAnimations = storyCards.map((_, index) => {
         const maxOffset = trackHeight / 4.5;
-        const section = 1 / storyCards.length; // длина одной "зоны видимости" для карточки
-        const start = section * index - 0.05; // начало диапазона
-        const end = section * (index + 1); // конец диапазона
+        const section = 1 / storyCards.length;
+        const start = section * index - 0.05;
+        const end = section * (index + 1);
 
-        // Проверяем, находится ли текущий прогресс в диапазоне карточки
-        const localProgress = progress < start ? 0 : progress > end ? 1 : (progress - start) / section; // нормализуем в диапазон 0–1
+        const localProgress = progress < start ? 0 : progress > end ? 1 : (progress - start) / section;
 
         const offsetY = -Math.min((trackHeight / (4 + index)) * localProgress, maxOffset) + y.get();
         const offsetX = x.get();
@@ -145,7 +144,7 @@ export default function Story() {
     const isMobile = windowWidth <= 768;
 
     return (
-        <section className="story">
+        <section className="story" id='about'>
             <Image className="story-img" src="/img/story-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="story-content">
@@ -180,7 +179,7 @@ export default function Story() {
                     </div>
                 </div>
 
-                <div className="story-progress-wrapper">
+                <div className="story-progress-wrapper" id="story">
                     <div className="story-progress">
                         <div className="story-progress-header">
                             {progressHeader.map((item, idx) => {

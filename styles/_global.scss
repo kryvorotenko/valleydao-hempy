@@ -8,7 +8,6 @@
 html, body {
     font-family: 'McLaren', system-ui;
     //font-family: 'Luckiest Guy', system-ui;
-
 }
 
 main {
@@ -21,7 +20,6 @@ main {
     margin: 0 auto;
     width: 100%;
 }
-
 
 @media screen and (max-width: 877px) {
     main {
@@ -41,3 +39,4 @@ main {
 @import "order";
 @import "ui/input";
 @import "ui/select";
+@import "sizing-popup";

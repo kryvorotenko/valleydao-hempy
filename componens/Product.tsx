@@ -12,11 +12,13 @@ import DescriptionIconOne from '@/icon/product-description/DescriptionIconOne';
 import DescriptionIconThree from '@/icon/product-description/DescriptionIconThree';
 import DescriptionIconTwo from '@/icon/product-description/DescriptionIconTwo';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import SizingPopup from "@/componens/SizingPopup";
 
 export default function Product() {
     const [isPopupOpen, setPopupOpen] = React.useState(false);
+    const[isSizePopupOpen, setSizePopupOpen] = React.useState(false);
+
     React.useEffect(() => {
         if (isPopupOpen) {
             document.body.style.overflow = 'hidden';
@@ -29,8 +31,21 @@ export default function Product() {
         };
     }, [isPopupOpen]);
 
+    React.useEffect(() => {
+        if (isSizePopupOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isSizePopupOpen]);
+
+
     return (
-        <section className="product">
+        <section className="product" id='product'>
             <Image className="product-img" src="/img/product-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="product-content">
@@ -62,9 +77,9 @@ export default function Product() {
                                 </label>
                             </div>
                         </div>
-                        <Link href="#" className="product-price-link">
+                        <button onClick={()=>setSizePopupOpen(true)} type={'button'} className="product-price-link">
                             Sizing chart
-                        </Link>
+                        </button>
                             <p className="product-price-order">
                                 Pre-order:
                                 <span>$109</span>
@@ -91,6 +106,7 @@ export default function Product() {
                 </div>
             </div>
             {isPopupOpen && <OrderPopup onClick={() => setPopupOpen(false)} />}
+            {isSizePopupOpen && <SizingPopup onClick={() => setSizePopupOpen(false)} />}
         </section>
     );
 }

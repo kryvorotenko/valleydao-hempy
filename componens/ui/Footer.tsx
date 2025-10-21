@@ -32,22 +32,22 @@ export default function Footer() {
                             <nav className="footer-nav">
                                 <ul className="footer-nav-column">
                                     <li className="footer-nav-item">
-                                        <Link href="#">About HEMPY</Link>
+                                        <Link href="#about">About HEMPY</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Roadmap</Link>
+                                        <Link href="#story">Roadmap</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Hempynomics</Link>
+                                        <Link href="#hempynomics">Hempynomics</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">FAQ</Link>
+                                        <Link href="#faq">FAQ</Link>
                                     </li>
                                     <li className="footer-nav-item">
                                         <Link href="#">Litepaper</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Shop</Link>
+                                        <Link href="#product">Shop</Link>
                                     </li>
                                 </ul>
                                 <ul className="footer-nav-column">

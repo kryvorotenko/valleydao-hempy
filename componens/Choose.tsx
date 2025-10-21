@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function Choose() {
     return (
-        <section className="choose">
+        <section className="choose" id='hempynomics'>
             <Image className="choose-img" src="/img/choose-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="choose-content">
@@ -121,7 +121,7 @@ export default function Choose() {
                                     <CheckIcon />
                                 </td>
                                 <td>
-                                    <CheckIcon />
+                                  <span className='question'>?</span>
                                 </td>
                                 <td>
                                     <NotIcon />
@@ -139,7 +139,7 @@ export default function Choose() {
                                     <NotIcon />
                                 </td>
                                 <td>
-                                    <NotIcon />
+                                    <span className='question'>?</span>
                                 </td>
                                 <td>
                                     <NotIcon />
@@ -166,6 +166,21 @@ export default function Choose() {
                                     <CheckIcon />
                                 </td>
                                 <td>
+                                    <span className='question'>?</span>
+                                </td>
+                                <td>
+                                    <NotIcon />
+                                </td>
+                                <td>
+                                    <NotIcon />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Made in Europe</td>
+                                <td>
+                                    <CheckIcon />
+                                </td>
+                                <td>
                                     <NotIcon />
                                 </td>
                                 <td>
@@ -176,7 +191,7 @@ export default function Choose() {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Rewards</td>
+                                <td>$50 HeMPY Rewards</td>
                                 <td className='choose-table-span-wrapper'>
                                     <CheckIcon /> <br />
                                     <span>50$ in $HEMPY</span>
@@ -192,7 +207,7 @@ export default function Choose() {
                                 </td>
                             </tr>
                             <tr>
-                                <td>Unique</td>
+                                <td>limited edition</td>
                                 <td>
                                     <CheckIcon />
                                 </td>

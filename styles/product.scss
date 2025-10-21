@@ -271,12 +271,10 @@
 
             .prev {
                 left: 5%;
-                padding: 7px 3px 1px 5px;
             }
 
             .next {
                 right: 5%;
-                padding: 7px 1px 1px 7px;
             }
 
             &-pagination {
@@ -309,8 +307,8 @@
             max-height: 47.43vw;
             max-width: 34.93vw;
             width: fit-content;
+            object-fit: contain;
         }
-
     }
 
     &-thumbs {
@@ -447,12 +445,12 @@
     0%   { transform: rotate(-2deg); }
     100% { transform: rotate(2deg); }
 }
+
 @keyframes move-order-label {
     0%   { transform: rotate(5deg); }
     50% { transform: rotate(-5deg); }
     100% { transform: rotate(5deg); }
 }
-
 
 @media screen and (max-width: 768px) {
     .product {

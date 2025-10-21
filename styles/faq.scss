@@ -47,6 +47,7 @@
         background: #FFFFB8;
         box-shadow: 0 4px 0 0 #000;
         cursor: pointer;
+        z-index: 1;
 
         &-header {
             display: flex;
@@ -64,10 +65,6 @@
                 text-transform: uppercase;
                 padding-top: 10px;
             }
-
-            &-button {
-                padding: 10px 8px 2px 11px !important;
-            }
         }
 
         &-answer {
@@ -83,6 +80,11 @@
                 max-height: 0;
                 transition: max-height 0.4s ease;
             }
+
+        }
+        &-answer b{
+            font-family: Arial,sans-serif !important;
+            font-weight: 700 !important;
         }
     }
 
@@ -90,15 +92,21 @@
         position: absolute;
         display: block;
         z-index: -1;
+        transform-origin: 50% 100%;
+
 
         &.left {
             top: 10%;
             left: -50%;
+            transform-origin: 50% 100%;
+            animation: move-faq-jackets 6s linear infinite;
         }
 
         &.right {
             bottom: -10%;
             right: -40%;
+            transform-origin: 100% 50%;
+            animation: move-faq-jackets 6s linear infinite;
         }
     }
 
@@ -138,6 +146,18 @@
 }
 
 @keyframes move-faq-cloud {
+    0% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(7deg);
+    }
+}
+
+@keyframes move-faq-jackets {
     0% {
         transform: rotate(7deg);
     }
