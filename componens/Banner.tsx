@@ -20,7 +20,7 @@ import Lottie from "lottie-react";
 
 export default function Banner() {
     return (
-        <section className="banner">
+        <section className="banner" id={'#banner'}>
             <Image className="banner-img" src="/img/banner.png" alt="banner" fill priority />
             <h1 className="banner-title container">The most planet friendly hoodie you’ll ever wear </h1>
             <div className="banner-man-wrapper">

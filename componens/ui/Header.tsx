@@ -15,6 +15,7 @@ import React from 'react';
 
 export default function Header() {
     const [isOpen, setIsOpen] = React.useState(false);
+    const [isBurgerOpen, setBurgerOpen] = React.useState(false);
 
     const burgerOpen = () => {
         setIsOpen((prev) => !prev);
@@ -89,7 +90,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <HeaderBurger isOpen={isOpen} />
+            <HeaderBurger isOpen={isOpen} onClose={()=>setIsOpen(false)} />
         </header>
     );
 }

@@ -6,6 +6,7 @@ import CloudIcon from '@/icon/CloudIcon';
 import NotIcon from '@/icon/NotIcon';
 import Lottie from 'lottie-react';
 import Image from 'next/image';
+import QuestionIcon from "@/icon/QuestionIcon";
 
 export default function Choose() {
     return (
@@ -121,7 +122,8 @@ export default function Choose() {
                                     <CheckIcon />
                                 </td>
                                 <td>
-                                  <span className='question'>?</span>
+                                  {/*<span className='question'>?</span>*/}
+                                    <QuestionIcon/>
                                 </td>
                                 <td>
                                     <NotIcon />
@@ -139,7 +141,8 @@ export default function Choose() {
                                     <NotIcon />
                                 </td>
                                 <td>
-                                    <span className='question'>?</span>
+                                    {/*<span className='question'>?</span>*/}
+                                    <QuestionIcon/>
                                 </td>
                                 <td>
                                     <NotIcon />
@@ -166,7 +169,8 @@ export default function Choose() {
                                     <CheckIcon />
                                 </td>
                                 <td>
-                                    <span className='question'>?</span>
+                                    {/*<span className='question'>?</span>*/}
+                                    <QuestionIcon/>
                                 </td>
                                 <td>
                                     <NotIcon />
