@@ -1,6 +1,6 @@
 'use client';
 
-import OrderPopup from '@/componens/OrderPopup';
+import SizingPopup from '@/componens/SizingPopup';
 import ProductDescriptionItem from '@/componens/product/ProductDescriptionItem';
 import ProductSlider from '@/componens/product/ProductSlider';
 import Button from '@/componens/ui/Button';
@@ -13,24 +13,25 @@ import DescriptionIconThree from '@/icon/product-description/DescriptionIconThre
 import DescriptionIconTwo from '@/icon/product-description/DescriptionIconTwo';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import SizingPopup from "@/componens/SizingPopup";
 
 export default function Product() {
-    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [isSizePopupOpen, setSizePopupOpen] = useState(false);
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
-    const[isSizePopupOpen, setSizePopupOpen] = React.useState(false);
 
-    useEffect(() => {
-        if (isPopupOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+    const sizes = ['s', 'm', 'l', 'xl'];
+    const onPurchase = async () => {
+        if (!selectedSize) return;
+        setLoading(true);
+        const res = await fetch('/api/create-checkout-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ size: selectedSize }),
+        });
 
-        return () => {
-            document.body.style.overflow = '';
-        };
-    }, [isPopupOpen]);
+        const data = await res.json();
+        window.location.href = data.url;
+    };
 
     useEffect(() => {
         if (isSizePopupOpen) {
@@ -44,10 +45,8 @@ export default function Product() {
         };
     }, [isSizePopupOpen]);
 
-    const sizes = ['s', 'm', 'l', 'xl'];
-
     return (
-        <section className="product" id='product'>
+        <section className="product" id="product">
             <Image className="product-img" src="/img/product-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="product-content">
@@ -78,20 +77,20 @@ export default function Product() {
                                 ))}
                             </div>
                         </div>
-                        <button onClick={()=>setSizePopupOpen(true)} type={'button'} className="product-price-link">
+                        <button onClick={() => setSizePopupOpen(true)} type={'button'} className="product-price-link">
                             Sizing chart
                         </button>
-                            <p className="product-price-order">
-                                Pre-order:
-                                <span>$109</span>
-                                <span className="product-price-order-label">Free shipping</span>
-                            </p>
+                        <p className="product-price-order">
+                            Pre-order:
+                            <span>$109</span>
+                            <span className="product-price-order-label">Free shipping</span>
+                        </p>
                         <span className="product-price-regular">regular price: $129</span>
                         <Button
-                            onClick={() => setPopupOpen(true)}
                             className="product-price-button"
                             disabled={!selectedSize}
-                            title="Pre-order now"
+                            title={loading ? 'Loading...' : 'Pre-order now'}
+                            onClick={onPurchase}
                         />
                         <ProductPriceLabelBg />
                         <ProductPriceLabelMobileBg />
@@ -107,7 +106,7 @@ export default function Product() {
                     </div>
                 </div>
             </div>
-            {isPopupOpen && selectedSize && <OrderPopup size={selectedSize} onClick={() => setPopupOpen(false)} />}
+            {/*{isPopupOpen && selectedSize && <OrderPopup size={selectedSize} onClick={() => setPopupOpen(false)} />}*/}
             {isSizePopupOpen && <SizingPopup onClick={() => setSizePopupOpen(false)} />}
         </section>
     );
