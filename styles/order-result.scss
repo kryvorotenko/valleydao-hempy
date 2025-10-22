@@ -1,0 +1,101 @@
+.order-result{
+    padding-top: 12.5vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &-img {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &-title {
+        color: #FFDD09;
+        text-align: center;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #000;
+        font-family: 'Luckiest Guy', system-ui;
+        font-size: 8.3vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+
+    }
+    &-text{
+        color: #FFDD09;
+        text-align: center;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #000;
+        font-family: 'Luckiest Guy', system-ui;
+        font-size: 4.3vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        margin-bottom: 20px;
+    }
+
+    &-man {
+        display: block;
+        max-width: 60vw;
+        width: 100%;
+        height: auto;
+        transform: translateX(50%);
+        text-align: center;
+
+        &-mobile {
+            display: none;
+        }
+    }
+    &-button{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        font-size: 1.66vw!important;
+    }
+}
+@media screen and (max-width: 880px){
+    .order-result {
+        padding-top: 160px;
+    }
+}
+@media screen and (max-width: 768px){
+    .order-result{
+        padding-top: 160px;
+        min-height: 100%;
+
+        &-img {
+            position: absolute;
+            inset: 0;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        &-title {
+            -webkit-text-stroke-width: 1.6px;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        &-text{
+            font-size: 24px;
+            -webkit-text-stroke-width: 1.6px;
+        }
+
+        &-man {
+            display: none;
+            &-mobile {
+                display: block;
+                max-width: 312px;
+                transform: translateX(12%);
+                margin: 0 auto -75px;
+            }
+        }
+        &-button{
+            font-size: 24px!important;
+        }
+    }
+}
