@@ -44,12 +44,12 @@ export default function Choose() {
                                 <th>
                                     <span className="choose-table-header-item">
                                         <Image
-                                            src={'/img/choose/choose-item2.png'}
+                                            src={'/img/choose/choose-item3.png'}
                                             alt="item"
                                             width={206}
                                             height={220}
                                         />
-                                        <span className="default"> Mass-Market 1</span>
+                                        <span className="default">Patagonia hemp hoodie</span>
                                         <span className="mobile">
                                             Mm <br />1
                                         </span>
@@ -58,12 +58,12 @@ export default function Choose() {
                                 <th>
                                     <span className="choose-table-header-item">
                                         <Image
-                                            src={'/img/choose/choose-item3.png'}
+                                            src={'/img/choose/choose-item2.png'}
                                             alt="item"
                                             width={206}
                                             height={220}
                                         />
-                                        <span className="default">Mass-Market 2</span>
+                                        <span className="default">H&M cotton hoodie</span>
                                         <span className="mobile">
                                             Mm <br />2
                                         </span>
@@ -77,7 +77,7 @@ export default function Choose() {
                                             width={206}
                                             height={220}
                                         />
-                                        <span className="default">Mass-Market 3</span>
+                                        <span className="default">Adidas polyester hoodie</span>
                                         <span className="mobile">
                                             Mm <br />3
                                         </span>
@@ -138,14 +138,14 @@ export default function Choose() {
                                     <CheckIcon />
                                 </td>
                                 <td>
-                                    <NotIcon />
+                                    <CheckIcon />
                                 </td>
                                 <td>
                                     {/*<span className='question'>?</span>*/}
                                     <QuestionIcon/>
                                 </td>
                                 <td>
-                                    <NotIcon />
+                                    <CheckIcon />
                                 </td>
                             </tr>
                             <tr>
@@ -157,7 +157,7 @@ export default function Choose() {
                                     <NotIcon />
                                 </td>
                                 <td>
-                                    <CheckIcon />
+                                    <NotIcon />
                                 </td>
                                 <td>
                                     <NotIcon />

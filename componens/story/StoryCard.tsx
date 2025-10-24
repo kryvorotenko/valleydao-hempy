@@ -11,7 +11,7 @@ interface PropsType {
 export default function StoryCard({ img, title, color, text, list }: PropsType) {
     return (
         <div className={`story-card ${color}`}>
-            <Image className="story-card-img" src={img} alt={'story card'} width={240} height={378} />
+            <Image className="story-card-img" src={img} alt={'story card'} width={500} height={350} />
             <h3 className="story-card-title">{title}</h3>
             <div className='story-card-text-wrapper'><span className='story-card-text'>{text}</span>
             {list && (

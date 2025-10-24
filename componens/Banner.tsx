@@ -25,13 +25,34 @@ export default function Banner() {
             <h1 className="banner-title container">The most planet friendly hoodie you’ll ever wear </h1>
             <div className="banner-man-wrapper">
                 <BannerOrder/>
-                <Image className="banner-man" src="/img/banner-man.png" alt="banner" width={856} height={1148}/>
-                <Image
-                    className="banner-man-mobile"
-                    src="/img/banner-man-mobile.png"
-                    alt="banner"
-                    width={312}
-                    height={418}
+                {/*<Image className="banner-man" src="/img/banner-man.png" alt="banner" width={856} height={1148}/>*/}
+                {/*<Image*/}
+                {/*    className="banner-man-mobile"*/}
+                {/*    src="/img/banner-man-mobile.png"*/}
+                {/*    alt="banner"*/}
+                {/*    width={312}*/}
+                {/*    height={418}*/}
+                {/*/>*/}
+                <video
+                    className="banner-man-video"
+                    src="/video/banner-man.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    width="856"
+                    height="1148"
+                />
+
+                <video
+                    className="banner-man-video-mobile"
+                    src="/video/banner-man-mobile.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    width="500"
+                    height="418"
                 />
                 <div className="banner-labels">
                     <BannerLabel text="0% microplastics" icon={<BannerLabelMicroplastics/>} color={'yellow'}/>
