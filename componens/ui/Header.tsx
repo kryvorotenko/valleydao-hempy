@@ -52,28 +52,28 @@ export default function Header() {
             <div className="container">
                 <div className="header-content">
                     <div className="header-main">
-                        <a className="header-logo" href="#">
+                        <Link className="header-logo" href="/">
                             <LogoIcon />
-                        </a>
+                        </Link>
                         <nav className="header-nav">
                             <ul className="header-nav-row">
                                 <li className="header-nav-item">
-                                    <Link href="#about">About HEMPY</Link>
+                                    <Link href="/#about">About HEMPY</Link>
                                 </li>
                                 <li className="header-nav-item">
-                                    <Link href="#story">Roadmap</Link>
+                                    <Link href="/#story">Roadmap</Link>
                                 </li>
                                 <li className="header-nav-item">
-                                    <Link href="#hempynomics">Hempynomics</Link>
+                                    <Link href="/#hempynomics">Hempynomics</Link>
                                 </li>
                                 <li className="header-nav-item">
-                                    <Link href="#faq">FAQ</Link>
+                                    <Link href="/#faq">FAQ</Link>
                                 </li>
                                 <li className="header-nav-item">
-                                    <Link href="#">Litepaper</Link>
+                                    <Link href="/#">Litepaper</Link>
                                 </li>
                                 <li className="header-nav-item">
-                                    <Link href="#product">Shop</Link>
+                                    <Link href="/#product">Shop</Link>
                                 </li>
                             </ul>
                         </nav>

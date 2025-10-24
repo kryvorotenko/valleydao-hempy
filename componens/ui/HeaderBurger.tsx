@@ -5,7 +5,7 @@ import SwooshIcon from '@/icon/SwooshIcon';
 import TelegramIcon from '@/icon/TelegramIcon';
 import XIcon from '@/icon/XIcon';
 import Image from 'next/image';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 interface PropsType {
     isOpen: boolean;
@@ -21,12 +21,10 @@ export default function HeaderBurger({ isOpen, onClose }: PropsType) {
     }, [isOpen]);
 
     const handleNavClick = (id: string) => {
-        const section = document.querySelector(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.location.href = `/#${id}`;
         onClose();
     };
+
     return (
         <div className={`header-burger ${isOpen ? 'opened' : ''}`}>
             <div className="container">
@@ -39,22 +37,22 @@ export default function HeaderBurger({ isOpen, onClose }: PropsType) {
                 />
                 <div className="header-burger-nav">
                     <ul className="header-burger-nav-list">
-                        <li  className="header-burger-nav-item" onClick={()=>handleNavClick("#about")} >
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#about')}>
                             <span>About HEMPY</span>
                         </li>
-                        <li  className="header-burger-nav-item" onClick={()=>handleNavClick("#story")}>
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#story')}>
                             <span>Roadmap</span>
                         </li>
-                        <li className="header-burger-nav-item" onClick={()=>handleNavClick("#hempynomics")}>
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#hempynomics')}>
                             <span>Hempynomics</span>
                         </li>
-                        <li  className="header-burger-nav-item" onClick={()=>handleNavClick("#faq")}>
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#faq')}>
                             <span>FAQ</span>
                         </li>
-                        <li  className="header-burger-nav-item" onClick={()=>handleNavClick("#banner")} >
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#')}>
                             <span>Litepaper</span>
                         </li>
-                        <li  className="header-burger-nav-item" onClick={()=>handleNavClick("#product")}>
+                        <li className="header-burger-nav-item" onClick={() => handleNavClick('/#product')}>
                             <span>Shop</span>
                         </li>
                     </ul>
