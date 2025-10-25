@@ -6,6 +6,7 @@ import BitcoinIcon from '@/icon/BitcoinIcon';
 import CardIcon from '@/icon/CardIcon';
 import CheckSmallIcon from '@/icon/CheckSmallIcon';
 import GoogleIcon from '@/icon/GoogleIcon';
+import {CardElement} from "@stripe/react-stripe-js";
 import { useState } from 'react';
 
 export default function OrderPopupMethod() {

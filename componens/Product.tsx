@@ -1,5 +1,6 @@
 'use client';
 
+import OrderPopup from "@/componens/OrderPopup";
 import SizingPopup from '@/componens/SizingPopup';
 import ProductDescriptionItem from '@/componens/product/ProductDescriptionItem';
 import ProductSlider from '@/componens/product/ProductSlider';
@@ -16,22 +17,23 @@ import React, { useEffect, useState } from 'react';
 
 export default function Product() {
     const [loading, setLoading] = useState(false);
+    const [isPopupOpen, setPopupOpen] = useState(false);
     const [isSizePopupOpen, setSizePopupOpen] = useState(false);
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
     const sizes = ['s', 'm', 'l', 'xl'];
-    const onPurchase = async () => {
-        if (!selectedSize) return;
-        setLoading(true);
-        const res = await fetch('/api/create-checkout-session', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ size: selectedSize }),
-        });
-
-        const data = await res.json();
-        window.location.href = data.url;
-    };
+    // const onPurchase = async () => {
+    //     if (!selectedSize) return;
+    //     setLoading(true);
+    //     const res = await fetch('/api/create-checkout-session', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify({ size: selectedSize }),
+    //     });
+    //
+    //     const data = await res.json();
+    //     window.location.href = data.url;
+    // };
 
     useEffect(() => {
         if (isSizePopupOpen) {
@@ -44,6 +46,18 @@ export default function Product() {
             document.body.style.overflow = '';
         };
     }, [isSizePopupOpen]);
+
+    useEffect(() => {
+        if (isPopupOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isPopupOpen]);
 
     return (
         <section className="product" id="product">
@@ -90,7 +104,8 @@ export default function Product() {
                             className="product-price-button"
                             disabled={!selectedSize}
                             title={loading ? 'Loading...' : 'Pre-order now'}
-                            onClick={onPurchase}
+                            // onClick={onPurchase}
+                            onClick={() => setPopupOpen(true)}
                         />
                         <ProductPriceLabelBg />
                         <ProductPriceLabelMobileBg />
@@ -106,7 +121,7 @@ export default function Product() {
                     </div>
                 </div>
             </div>
-            {/*{isPopupOpen && selectedSize && <OrderPopup size={selectedSize} onClick={() => setPopupOpen(false)} />}*/}
+            {isPopupOpen && selectedSize && <OrderPopup size={selectedSize} onClick={() => setPopupOpen(false)} />}
             {isSizePopupOpen && <SizingPopup onClick={() => setSizePopupOpen(false)} />}
         </section>
     );
