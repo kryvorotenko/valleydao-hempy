@@ -35,14 +35,17 @@ export default function Banner() {
                 {/*/>*/}
                 <video
                     className="banner-man-video"
-                    src="/video/banner-man.mp4"
                     autoPlay
                     loop
                     muted
                     playsInline
                     width="856"
                     height="1148"
-                />
+                >
+                    <source src="/video/banner-man.webm" type="video/webm"/>
+                    <source src="/video/banner-man.mp4" type="video/mp4"/>
+                    Ваш браузер не поддерживает видео.
+                </video>
 
                 <video
                     className="banner-man-video-mobile"
