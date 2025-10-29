@@ -459,11 +459,10 @@
 
                 &-mobile {
                     display: block;
-                    width: 150%;
-                    //max-width: 312px;
-                    //transform: translateX(12%);
-                    margin: 0 auto 0;
+                    width: 100%;
+                    height: auto;
                     text-align: center;
+                    margin: -35% auto 10%;
                 }
             }
 
@@ -483,14 +482,14 @@
         &-circle {
             display: inline-block;
             position: absolute;
-            bottom: 30%;
-            right: 10%;
+            bottom: 25%;
+            right: 5%;
             margin-bottom: 34px;
             z-index: 2;
 
             svg {
-                width: 148px;
-                height: 148px;
+                width: 128px;
+                height: 128px;
                 transform-origin: 50% 50%;
                 animation: rotate-slow 20s linear infinite;
             }
@@ -584,9 +583,8 @@
 
         &-order {
             height: fit-content;
-            left: 29px;
-            top: 266px;
             z-index: 1;
+            transform: rotate(17deg) translateY(150px) translateX(40px);
 
             &-bg {
                 position: absolute;

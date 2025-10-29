@@ -1,4 +1,8 @@
-'use client'
+'use client';
+
+import Lotti1 from '@/animations/Line 1.json';
+import Lotti2 from '@/animations/Line 2.json';
+import Lotti3 from '@/animations/Line 3.json';
 import BannerLabel from '@/componens/banner/BannerLabel';
 import BannerOrder from '@/componens/banner/BannerOrder';
 import BannerCircleIcon from '@/icon/BannerCircleIcon';
@@ -11,12 +15,8 @@ import LeafFourIcon from '@/icon/banner-offer-leafs/LeafFourIcon';
 import LeafOneIcon from '@/icon/banner-offer-leafs/LeafOneIcon';
 import LeafThreeIcon from '@/icon/banner-offer-leafs/LeafThreeIcon';
 import LeafTwoIcon from '@/icon/banner-offer-leafs/LeafTwoIcon';
+import Lottie from 'lottie-react';
 import Image from 'next/image';
-import Lotti1 from '@/animations/Line 1.json'
-import Lotti2 from '@/animations/Line 2.json'
-import Lotti3 from '@/animations/Line 3.json'
-import Lottie from "lottie-react";
-
 
 export default function Banner() {
     return (
@@ -24,58 +24,36 @@ export default function Banner() {
             <Image className="banner-img" src="/img/banner.png" alt="banner" fill priority />
             <h1 className="banner-title container">The most planet friendly hoodie you’ll ever wear </h1>
             <div className="banner-man-wrapper">
-                <BannerOrder/>
-                {/*<Image className="banner-man" src="/img/banner-man.png" alt="banner" width={856} height={1148}/>*/}
-                {/*<Image*/}
-                {/*    className="banner-man-mobile"*/}
-                {/*    src="/img/banner-man-mobile.png"*/}
-                {/*    alt="banner"*/}
-                {/*    width={312}*/}
-                {/*    height={418}*/}
-                {/*/>*/}
-                <video
-                    className="banner-man-video"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    width="856"
-                    height="1148"
-                >
-                    <source src="/video/banner-man.webm" type="video/webm"/>
-                    <source src="/video/banner-man.mp4" type="video/mp4"/>
-                    Ваш браузер не поддерживает видео.
+                <BannerOrder />
+                <video className="banner-man-video" autoPlay loop muted playsInline width="856" height="1148">
+                    <source src="/video/banner-man.webm" type="video/webm" />
+                    <source src="/video/banner-man.mp4" type="video/mp4" />
+                    Your browser does not support videos.
                 </video>
-
-                <video
-                    className="banner-man-video-mobile"
-                    src="/video/banner-man-mobile.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    width="500"
-                    height="418"
-                />
+                <video className="banner-man-video-mobile" autoPlay loop muted playsInline width="500" height="418">
+                    <source src="/video/banner-man-mobile.webm" type="video/webm" />
+                    <source src="/video/banner-man-mobile.mp4" type="video/mp4" />
+                    Your browser does not support videos.
+                </video>
                 <div className="banner-labels">
-                    <BannerLabel text="0% microplastics" icon={<BannerLabelMicroplastics/>} color={'yellow'}/>
+                    <BannerLabel text="0% microplastics" icon={<BannerLabelMicroplastics />} color={'yellow'} />
                     <BannerLabel
                         text="Highly breathable"
-                        icon={<BannerLabelHighlyIcon/>}
+                        icon={<BannerLabelHighlyIcon />}
                         color={'orange'}
                         reverse={true}
                     />
-                    <BannerLabel text="Wear it for life" icon={<BannerLabelWearIcon/>} color={'blue'}/>
-                    <BannerLabel text="HempKnit™ Technology" icon={<BannerLabelTechnologyIcon/>} color={'lemon'}/>
+                    <BannerLabel text="Wear it for life" icon={<BannerLabelWearIcon />} color={'blue'} />
+                    <BannerLabel text="HempKnit™ Technology" icon={<BannerLabelTechnologyIcon />} color={'lemon'} />
                 </div>
                 <div className="banner-lottie">
-                    <Lottie className='banner-lottie-item one' animationData={Lotti1}/>
-                    <Lottie className='banner-lottie-item two' animationData={Lotti2}/>
-                    <Lottie className='banner-lottie-item three' animationData={Lotti3}/>
-                    <Lottie className='banner-lottie-item four' animationData={Lotti2}/>
+                    <Lottie className="banner-lottie-item one" animationData={Lotti1} />
+                    <Lottie className="banner-lottie-item two" animationData={Lotti2} />
+                    <Lottie className="banner-lottie-item three" animationData={Lotti3} />
+                    <Lottie className="banner-lottie-item four" animationData={Lotti2} />
                 </div>
                 <span className="banner-circle">
-                    <BannerCircleIcon/>
+                    <BannerCircleIcon />
                 </span>
             </div>
             <p className="banner-offer">
@@ -83,8 +61,8 @@ export default function Banner() {
                 <span>Edition</span>
                 <span className="banner-offer-leaf">
                     Bio Engineered Drip
-                    <LeafOneIcon/>
-                    <LeafTwoIcon/>
+                    <LeafOneIcon />
+                    <LeafTwoIcon />
                     <LeafThreeIcon />
                     <LeafFourIcon />
                     <LeafFiveIcon />
