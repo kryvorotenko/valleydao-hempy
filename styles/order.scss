@@ -183,7 +183,7 @@
 
             &-row {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 24px;
             }
 
@@ -279,16 +279,13 @@
 
             &-data {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
                 align-items: flex-end;
                 margin-bottom: 24px;
             }
 
             &-radio {
-                display: flex;
-                align-items: center;
-                width: 100%;
 
                 &-label {
                     display: flex;
@@ -319,6 +316,17 @@
                     font-weight: 400;
                     line-height: 140%;
                     white-space: nowrap;
+                }
+
+            }
+
+            &-buttons {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                .button {
+                    padding: 12px 32px !important;
                 }
             }
         }
