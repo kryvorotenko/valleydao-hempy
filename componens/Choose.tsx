@@ -34,11 +34,7 @@ export default function Choose() {
                                             height={220}
                                         />
                                         <span className="default">Hemp Hoodie</span>
-                                        <span className="mobile">
-                                            Hemp
-                                            <br />
-                                            Hoodie
-                                        </span>
+                                        <span className="mobile">Hemp<br />Hoodie</span>
                                     </span>
                                 </th>
                                 <th>
@@ -50,9 +46,7 @@ export default function Choose() {
                                             height={220}
                                         />
                                         <span className="default">Patagonia hemp hoodie</span>
-                                        <span className="mobile">
-                                            Mm <br />1
-                                        </span>
+                                        <span className="mobile">Patagonia hemp hoodie</span>
                                     </span>
                                 </th>
                                 <th>
@@ -64,9 +58,7 @@ export default function Choose() {
                                             height={220}
                                         />
                                         <span className="default">H&M cotton hoodie</span>
-                                        <span className="mobile">
-                                            Mm <br />2
-                                        </span>
+                                        <span className="mobile">H&M cotton hoodie</span>
                                     </span>
                                 </th>
                                 <th>
@@ -77,10 +69,8 @@ export default function Choose() {
                                             width={206}
                                             height={220}
                                         />
-                                        <span className="default">Adidas polyester hoodie</span>
-                                        <span className="mobile">
-                                            Mm <br />3
-                                        </span>
+                                        <span className="default"></span>
+                                        <span className="mobile">Adidas polyester hoodie</span>
                                     </span>
                                 </th>
                             </tr>

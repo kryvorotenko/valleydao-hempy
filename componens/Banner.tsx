@@ -31,7 +31,7 @@ export default function Banner() {
                     Your browser does not support videos.
                 </video>
                 <video className="banner-man-video-mobile" autoPlay loop muted playsInline width="500" height="418">
-                    <source src="/video/banner-man-mobile.webm" type="video/webm" />
+                    <source src="/video/banner-man-mobile.webm" type="video/mp4" />
                     <source src="/video/banner-man-mobile.mp4" type="video/mp4" />
                     Your browser does not support videos.
                 </video>

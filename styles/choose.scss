@@ -67,6 +67,8 @@
                 width: 100%;
                 height: auto;
                 max-width: 15vw;
+                aspect-ratio: 1;
+                object-fit: contain;
             }
 
             .default {
