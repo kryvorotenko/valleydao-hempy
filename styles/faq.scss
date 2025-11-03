@@ -196,6 +196,10 @@
             &-answer {
                 font-size: 16px;
                 padding-top: 8px;
+
+                span {
+                    word-break: break-all;
+                }
             }
         }
 

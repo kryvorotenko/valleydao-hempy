@@ -449,6 +449,7 @@
             -webkit-text-stroke-width: 1.6px;
             font-size: 36px;
             text-transform: uppercase;
+            margin-bottom: 32px;
         }
 
         &-man {
@@ -462,13 +463,15 @@
                     width: 100%;
                     height: auto;
                     text-align: center;
-                    margin: -35% auto 10%;
+                    margin: -35% auto 0;
                 }
             }
 
             &-wrapper {
                 width: 100%;
                 margin: -10px auto 0;
+                display: flex;
+                flex-direction: column-reverse;
             }
 
             &-mobile {
@@ -482,8 +485,8 @@
         &-circle {
             display: inline-block;
             position: absolute;
-            bottom: 25%;
-            right: 5%;
+            bottom: -3%;
+            right: 2%;
             margin-bottom: 34px;
             z-index: 2;
 
@@ -584,7 +587,7 @@
         &-order {
             height: fit-content;
             z-index: 1;
-            transform: rotate(17deg) translateY(150px) translateX(40px);
+            transform: rotate(17deg) translateY(200px) translateX(50px);
 
             &-bg {
                 position: absolute;

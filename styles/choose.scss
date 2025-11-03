@@ -188,6 +188,18 @@
         }
 
         &-table {
+            min-width: 500px;
+
+            &-wrapper {
+                overflow: auto;
+                margin: 0 -24px;
+                padding: 24px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
             th {
                 font-size: 12px;
                 padding-top: 0;
