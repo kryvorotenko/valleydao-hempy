@@ -61,7 +61,6 @@ export default function Product() {
 
     return (
         <section className="product" id="product">
-            <Image className="product-img" src="/img/product-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="product-content">
                     <ProductSlider />

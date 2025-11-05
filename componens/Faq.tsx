@@ -10,7 +10,6 @@ import Image from 'next/image';
 export default function Faq() {
     return (
         <section className="faq" id="faq">
-            <Image className="choose-img" src="/img/choose-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="faq-content">
                     <h2 className="faq-title">FAQ</h2>

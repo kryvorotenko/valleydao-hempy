@@ -11,7 +11,6 @@ import Image from 'next/image';
 export default function Choose() {
     return (
         <section className="choose" id="hempynomics">
-            <Image className="choose-img" src="/img/choose-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="choose-content">
                     <h2 className="choose-title">why choose hempy?</h2>
@@ -50,7 +49,7 @@ export default function Choose() {
                                                 width={206}
                                                 height={220}
                                             />
-                                            <span className="default">Patagonia </span>
+                                            <span className="default">Patagonia Hemp Hoodie</span>
                                             <span className="mobile">Patagonia </span>
                                         </span>
                                     </th>
@@ -62,7 +61,7 @@ export default function Choose() {
                                                 width={206}
                                                 height={220}
                                             />
-                                            <span className="default">H&M cotton </span>
+                                            <span className="default">H&M cotton Hoodie</span>
                                             <span className="mobile">H&M cotton </span>
                                         </span>
                                     </th>
@@ -74,7 +73,7 @@ export default function Choose() {
                                                 width={206}
                                                 height={220}
                                             />
-                                            <span className="default">Adidas polyester </span>
+                                            <span className="default">Adidas polyester Hoodie</span>
                                             <span className="mobile">Adidas polyester </span>
                                         </span>
                                     </th>

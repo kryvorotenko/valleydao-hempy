@@ -7,13 +7,6 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    &-img {
-        position: absolute;
-        inset: 0;
-        object-fit: cover;
-        z-index: -1;
-    }
-
     &-content {
         width: 100%;
         text-align: center;

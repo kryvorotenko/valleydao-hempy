@@ -10,6 +10,13 @@ html, body {
     //font-family: 'Luckiest Guy', system-ui;
 }
 
+body {
+    background-image: url("/img/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 main {
     margin-top: -8.58vw;
 }
@@ -22,6 +29,9 @@ main {
 }
 
 @media screen and (max-width: 877px) {
+    body {
+        background-image: url("/img/background-mobile.png");
+    }
     main {
         margin-top: -134px;
     }

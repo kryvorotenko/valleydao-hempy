@@ -145,7 +145,6 @@ export default function Story() {
 
     return (
         <section className="story" id='about'>
-            <Image className="story-img" src="/img/story-bg.png" alt="banner" fill priority />
             <div className="container">
                 <div className="story-content">
                     <div className="story-lottie">
