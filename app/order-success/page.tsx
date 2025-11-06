@@ -9,7 +9,6 @@ export default function OrderSuccess() {
             <Header/>
             <main>
                 <section className={'order-result'}>
-                    <Image className="banner-img" src="/img/banner.png" alt="banner" fill priority/>
                     <div className="container">
                         <div className="order-result-content">
                             <h1 className="order-result-title">Order successful!</h1>
@@ -21,8 +20,8 @@ export default function OrderSuccess() {
                                 className="order-result-man"
                                 src="/img/banner-man.png"
                                 alt="banner"
-                                width={856}
-                                height={1148}
+                                width={1856}
+                                height={2148}
                             />
                             <Image
                                 className="order-result-man-mobile"
