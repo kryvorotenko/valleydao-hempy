@@ -1,24 +1,39 @@
-import type {Metadata} from "next";
-import '@fontsource/mclaren';
+import '@/styles/_global.scss';
 import '@fontsource/luckiest-guy';
-import "@/styles/_global.scss";
-import {ReactNode} from "react";
+import '@fontsource/mclaren';
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: "ValleyDAO Hempy",
-  description: "This website was created for ValleyDAO Hempy Hoodie",
+    title: 'ValleyDAO Hempy',
+    description: 'This website was created for ValleyDAO Hempy Hoodie',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: ReactNode;
+    children: ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>
+                <Image
+                    src="/img/background.png"
+                    alt="page background"
+                    fill
+                    objectFit="cover"
+                    className="page-background"
+                />
+                <Image
+                    src="/img/background-mobile.png"
+                    alt="page background"
+                    fill
+                    objectFit="cover"
+                    className="page-background-mobile"
+                />
+                {children}
+            </body>
+        </html>
+    );
 }
