@@ -16,7 +16,9 @@ body {
 }
 
 .page-background {
+    z-index: -1;
     &-mobile {
+        z-index: -1;
         display: none;
     }
 }
