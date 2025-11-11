@@ -10,7 +10,6 @@ export default function OrderCancel() {
             <Header />
             <main>
                 <section className={'order-result'}>
-                    <Image className="banner-img" src="/img/banner.png" alt="banner" fill priority />
                     <div className="container">
                         <div className="order-result-content">
                             <h1 className="order-result-title">Oops!</h1>
