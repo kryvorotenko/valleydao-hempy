@@ -18,12 +18,12 @@ export default function Footer() {
                 <div className="footer-content">
                     <div className="footer-top">
                         <div className="footer-socials">
-                            <Button color={'yellow'} icon={<TelegramIcon />} />
-                            <Button color={'yellow'} icon={<XIcon />} />
-                            <Button color={'yellow'} icon={<EagleFaceIcon />} />
-                            <Button color={'yellow'} icon={<LizardHeadIcon />} />
-                            <Button color={'yellow'} icon={<SwooshIcon />} />
-                            <Button color={'yellow'} title={'Sign-up'} />
+                            <Button color={'yellow'} icon={<TelegramIcon />} href={'https://t.me/hempycommunity '}/>
+                            <Button color={'yellow'} icon={<XIcon />} href={'https://x.com/hempydotscience'}/>
+                            <Button color={'yellow'} icon={<EagleFaceIcon />} href={'https://dexscreener.com/base/0x41c4d3ec8f7c4a6a3fb43f4c18f8b7296fab4bcd'}/>
+                            {/*<Button color={'yellow'} icon={<LizardHeadIcon />} />*/}
+                            {/*<Button color={'yellow'} icon={<SwooshIcon />} />*/}
+                            <Button color={'yellow'} title={'Pre-Order'} href={'#product'}/>
                         </div>
                         <div className="footer-row">
                             <a className="footer-row-logo" href="#">
@@ -32,39 +32,40 @@ export default function Footer() {
                             <nav className="footer-nav">
                                 <ul className="footer-nav-column">
                                     <li className="footer-nav-item">
-                                        <Link href="#about">About HEMPY</Link>
+                                        <Link href="/#product">Shop</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#story">Roadmap</Link>
+                                        <Link href="/#about">About HEMPY</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#hempynomics">Hempynomics</Link>
+                                        <Link href="/#story">Roadmap</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#faq">FAQ</Link>
+                                        <Link href="https://hempy.science">Hempy Token</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Litepaper</Link>
+                                        <Link href="/#faq">FAQ</Link>
                                     </li>
-                                    <li className="footer-nav-item">
-                                        <Link href="#product">Shop</Link>
-                                    </li>
+                                    {/*<li className="footer-nav-item">*/}
+                                    {/*    <Link href="#">Litepaper</Link>*/}
+                                    {/*</li>*/}
+
                                 </ul>
                                 <ul className="footer-nav-column">
                                     <li className="footer-nav-item">
-                                        <Link href="#">Token Disclaimer</Link>
+                                    <Link href=" https://www.hempy.science/token-disclaimer">Token Disclaimer</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Imprint</Link>
+                                        <Link href="https://www.hempy.science/imprint">Imprint</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">Hempy IPToken <br/> Membership AGREEMENT</Link>
+                                        <Link href="https://drive.google.com/file/d/1umI8rvpfq2VsNnlqCOXXRgAhQpicKKd4/view">Hempy IPToken <br/> Membership AGREEMENT</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">FAQ</Link>
+                                        <Link href="/#faq">FAQ</Link>
                                     </li>
                                     <li className="footer-nav-item">
-                                        <Link href="#">HOODIE TERMS & <br/> CONDITIONS</Link>
+                                        <Link href="https://hempy.science/hoodie-terms">HOODIE TERMS & <br/> CONDITIONS</Link>
                                     </li>
                                 </ul>
                             </nav>

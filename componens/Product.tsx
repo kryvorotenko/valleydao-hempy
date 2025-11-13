@@ -1,6 +1,6 @@
 'use client';
 
-import OrderPopup from "@/componens/OrderPopup";
+import OrderPopup from '@/componens/OrderPopup';
 import SizingPopup from '@/componens/SizingPopup';
 import ProductDescriptionItem from '@/componens/product/ProductDescriptionItem';
 import ProductSlider from '@/componens/product/ProductSlider';
@@ -103,9 +103,9 @@ export default function Product() {
                             className="product-price-button"
                             disabled={!selectedSize}
                             title={loading ? 'Loading...' : 'Pre-order now'}
-                            // onClick={onPurchase}
                             onClick={() => setPopupOpen(true)}
                         />
+                        {!selectedSize && <span className="product-price-button-error">Please, choose a size</span>}{' '}
                         <ProductPriceLabelBg />
                         <ProductPriceLabelMobileBg />
                     </div>

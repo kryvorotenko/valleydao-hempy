@@ -1,7 +1,7 @@
 .button {
     border-radius: 10px;
     border: 2px solid #000;
-    padding: 10px;
+    padding: 0.69vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,8 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        svg{
+
+        svg {
         }
     }
 
@@ -23,7 +24,7 @@
         padding: 10px 22px 0;
         color: #000;
         font-family: 'Luckiest Guy', system-ui;
-        font-size: 24px;
+        font-size: 1.66vw;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
@@ -31,8 +32,8 @@
     }
 
     svg {
-        width: 24px;
-        height: 24px;
+        width: 1.66vw;
+        height: 1.66vw;
     }
 
     &.orange {
@@ -60,6 +61,7 @@
             background: #ffe545;
         }
     }
+
     &.original {
         background: #ffffb8;
         box-shadow: 0 2px 0 0 #000;
@@ -75,7 +77,39 @@
 
     &:disabled {
         cursor: not-allowed;
-        opacity: 0.75;
-        filter: blur(2);
+        //opacity: 0.75;
+        //filter: blur(2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        padding: 12px;
+
+        &.text {
+            padding: 10px 22px 0;
+            font-size: 24px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .button {
+        padding: 12px;
+
+        &.text {
+            padding: 10px 22px 0;
+            font-size: 24px;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

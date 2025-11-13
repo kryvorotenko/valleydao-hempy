@@ -73,7 +73,7 @@
 
 
         .button.text {
-            padding: 0.40vw 0.64vw 0.24vw;
+            padding: 0.40vw 0.64vw 0.11vw;
             font-size: 1.66vw;
         }
 
@@ -215,6 +215,9 @@
             transition: 0.4s ease-in-out;
             width: 100vw;
             height: 100vh;
+            background: rgba(41, 38, 38, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
 
             &-img {
                 position: fixed;
@@ -279,12 +282,14 @@
 
             &-socials {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                //grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 8px;
 
                 .button {
                     width: 56px;
                     height: 56px;
+                    margin: 0 auto;
                 }
 
                 .button:last-of-type {

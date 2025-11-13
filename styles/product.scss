@@ -217,6 +217,13 @@
             width: 100%;
             padding: 1.6vw 1.6vw 1.3vw !important;
             font-size: 1.66vw !important;
+            margin-bottom: 15px;
+
+            &-error{
+                margin: 0 auto;
+                font-size: 14px;
+                color: red;
+            }
         }
 
         &-label {
